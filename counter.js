@@ -1,8 +1,8 @@
-const INITIAL_COUNTER = 0;
 
-function createCounter() {
+
+function createCounter(initialCounter) {
     return {
-        counter: INITIAL_COUNTER,
+        counter: initialCounter,
         get: function() {
             return this.counter;
         },
@@ -13,7 +13,7 @@ function createCounter() {
             this.counter--;
         },
         reset: function() {
-            this.counter = INITIAL_COUNTER;
+            this.counter = initialCounter;
         },
     };
 };

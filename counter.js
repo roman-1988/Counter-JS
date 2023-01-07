@@ -3,6 +3,9 @@ const INITIAL_COUNTER = 0;
 function createCounter() {
     return {
         counter: INITIAL_COUNTER,
+        get: function() {
+            return this.counter;
+        },
         increment: function() {
             this.counter++;
         },

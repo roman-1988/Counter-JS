@@ -1,3 +1,5 @@
+"use strict";
+
 function createView({
     onIncrementButtonClick,
     onDecrementButtonClick,
@@ -8,17 +10,11 @@ function createView({
     const decrementBtnNode = document.querySelector(".js-decrement-btn");
     const resetBtnNode = document.querySelector(".js-reset-btn");
 
-    incrementBtnNode.addEventListener("click", () => {
-        onIncrementButtonClick();
-    });
+    incrementBtnNode.addEventListener("click", onIncrementButtonClick);
 
-    decrementBtnNode.addEventListener("click", () => {
-        onDecrementButtonClick();
-    });
+    decrementBtnNode.addEventListener("click", onDecrementButtonClick);
 
-    resetBtnNode.addEventListener("click", () => {
-        onResetButtonClick();
-    });
+    resetBtnNode.addEventListener("click", onResetButtonClick);
 
     return {
         render({counter}) {
